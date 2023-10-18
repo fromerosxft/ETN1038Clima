@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>1038</title>
+</head>
+
+<body>
+    <section class="py-5">
+        <div class="py-3">
+            <div class="container text-center">
+                <h1>
+                    FUNCIONAMIENTO
+                </h1>
+                <h2>
+                    Actualizar Datos
+                </h2>
+
+                <div class="container d-flex justify-content-center">
+                    <img src="https://assets.stickpng.com/images/62a22c1c443b787d58371266.png"
+                        class="rounded d-flex align-items-center mx-auto d-block" alt="...">
+                </div>
+                <br>
+                <h5>
+                    Esta página, al ingresar el nombre de una población específica y presionar el botón "Actualizar
+                    Datos", realiza una solicitud de datos a Firebase, estos datos son enviados de forma asíncrona a
+                    Puppeteer que es una API de control de navegadores.
+                </h5>
+                <br>
+                <div class="container d-flex justify-content-center">
+                    <img src="https://avatars.githubusercontent.com/u/6906516?s=280&v=4"
+                        class="rounded d-flex align-items-center mx-auto d-block" alt="...">
+                </div>
+                <br>
+                <h5>
+                    Con los datos ingresados, Puppeteer realiza un "scraping" del lugar solicitado en la página web del
+                    SENAMHI y devuelve los datos de temperatura y humedad relativa.
+                </h5>
+                <br>
+                <div class="container d-flex justify-content-center">
+                    <img src="https://onsc.senamhi.gob.bo/assets/images/logo-senamhi.jpg"
+                        class="rounded d-flex align-items-center mx-auto d-block" alt="...">
+                </div>
+                <br>
+                <h5>
+                    Posterior a ello se envía los datos hacia un registro separado en firebase, en el cual se almacenan
+                    todas las consultas realizadas, con su fecha correspondiente.
+                </h5>
+                <h5>
+                    Como no se tiene registro de la presión en el lugar, se procede a realizar un cálculo matemático
+                    para estimar su valor.
+                </h5>
+                <br>
+                <h2>
+                    Presentar Datos
+                </h2>
+                <br>
+                <h5>
+                    Al introducir en esta sección la población y presionar su botón correspondiente, dentro del programa
+                    se realiza una solicitud de filtrado de datos por "poblacion" en la tabla y se mostrarán los últimos
+                    10 registros del lugar.
+                </h5>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center py-5">
+            <a type="button" class="btn btn-warning btn-lg m-1" href="index.html">Volver</a>
+        </div>
+    </section>
+    
+
+</body>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

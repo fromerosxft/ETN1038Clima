@@ -1,0 +1,34 @@
+
+* { 
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  
+    
+    /* padding-top: 100%;
+    padding-bottom: 100%; */
+}
+
+body{
+    background-color: #8DABC3;
+}
+
+#home {
+    background-image: url(../images/Fondo.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+#pag1 {
+    background-image: url(../images/portait.jpg);
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}

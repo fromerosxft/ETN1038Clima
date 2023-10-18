@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/bloques.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etn 1038</title>
+</head>
+<body>
+    <section id="home" class="py-xl-2">
+        <div class="container py-xxl-1">
+            <!-- TITULO -->
+            <div class="container text-center py-2">
+                <h1>
+                    <b>SISTEMA DE ACTUALIZACIÓN DE INFORMACIÓN</b>
+                </h1>
+            </div>
+            <div class="container">
+                <!-- BUSCADOR, TABLA Y BLOQUE DE ENLACES -->
+                <div class="row">
+                    <!-- BLOQUE IZQUIERDO -->
+                    <div id="bloque-izq" class="col-xl-9">
+                        <!-- INPUT DATOS -->
+                        <div id="entrada-datos-y-nombres">
+                            <div class="row">
+                                <!-- BLOQUE DE DATOS -->
+                                <div id="ingreso-datos" class="col-md-8 d-flex align-items-center">
+                                    <div class="container-fluid">
+                                        <!-- agregar datos -->
+
+                                        <!-- <form>
+                                            <input type="text" id="idPoblacion" placeholder="poblacion" >
+                                            <input type="number" id="idLongitud" placeholder="longitud">
+                                            <input type="number" id="idLatitud" placeholder="latitud">
+                                            <input type="number" id="idTemperatura" placeholder="temperatura">
+                                            <input type="number" id="idHumedad" placeholder="humedad">
+                                            <input type="number" id="idPresion" placeholder="presion">
+                                        </form> 
+
+                                        <button id="idGuardar" onclick="funcionGuardar()" class="btn btn-primary">Guardar</button> -->
+                                        <!-- ACTUALIZAR DATOS -->
+                                        <div id="primera-entrada" class="row">
+                                            <div class="col-sm-9 d-grid gap-md-3 py-1">
+                                                <input type="text" list="actualizarSugerencias" value="" id="actualizarDatos" class="form-control" placeholder="Consultar localidad"/>
+                                                <datalist id="actualizarSugerencias"></datalist>
+                                            </div>
+                                            <div class="col-sm-3 d-grid gap-md-3 py-1">
+                                                <button href="#" class="btn btn-warning" onclick="actualizarButton()">Actualizar Datos</button>
+                                            </div>
+                                        </div>
+                                        <!-- PRESENTAR DATOS -->
+                                        <div id="segunda-entrada" class="row">
+                                            <div class="col-sm-9 d-grid gap-md-3 py-1">
+                                                <input type="text" list="presentarSugerencias" value="" id="presentarDatos" class="form-control" placeholder="Filtrar localidad" oninput="presentarTabla()"/>
+                                                <datalist id="presentarSugerencias"></datalist>
+                                            </div>
+                                            <div class="col-sm-3 d-grid gap-md-3 py-1">
+                                                <button href="#" class="btn btn-warning" onclick="presentarButton()">Presentar Datos</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- BLOQUE DE IDENTIFICACION -->
+                                <div id="nombres-grupo" class="col-md-4 d-flex justify-content-center justify-content-lg-end py-2">
+                                    <button class=" btn btn-warning btn-lg disabled">
+                                        <h3>
+                                            Romer Flores
+                                        </h3>
+                                        <h3>
+                                            Fernando Villamor
+                                        </h3>
+                                        <h3>
+                                            Grover Condori
+                                        </h3>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- TABLA DE DATOS -->
+                        <div id="tabla-datos" class="table-responsive py-2">
+                            <!-- <table  class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">gestion</th>
+                                    <th scope="col">mes</th>
+                                    <th scope="col">dia</th>
+                                    <th scope="col">ciudad o poblacion</th>
+                                    <th scope="col">longitud</th>
+                                    <th scope="col">latitud</th>
+                                    <th scope="col">temperatura maxima</th>
+                                    <th scope="col">humedad relativa maxima</th>
+                                    <th scope="col">presion maxima</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                    <th scope="row">3</th>
+                                    
+                                </tr>
+                                </tbody>
+                            </table> 
+                            <h3 id="altura"></h3>
+                            <h3 id="temperatura"></h3>-->
+                            <table id="imprimirTabla" class="table text-center">
+
+                            </table>
+                        </div>
+                    </div>
+                    <!-- BLOQUE DERECHO -->
+                    <div id="bloque-der" class="col-xl-3 d-flex align-items-end">
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-xl-3 d-flex justify-content-center">
+                                    <div class="col d-xl-grid gap-sm-3 d-sm-flex justify-content-between py-1">
+                                        <a type="button" class="btn btn-warning btn-lg m-1" href="https://senamhi.gob.bo/index.php" >Senamhi</a>
+                                        <a type="button" class="btn btn-warning btn-lg m-1" href="https://console.firebase.google.com/u/1/project/web1038-5f34c/firestore/data/~2Ftablas~2FKa5gQAUTMzEOxYa2l4Ut?view=panel-view&scopeType=collection&scopeName=%2Flocalidad">Base de Datos</a>
+                                        <a type="button" class="btn btn-warning btn-lg m-1" href="pagina.html" >Información</a>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+<!-- mis scripts -->
+<script src="./src/config.js"></script>
+<script src="./src/default.js"></script>
+<script src="./src/mostrar.js"></script>
+<script src="./src/guardar.js"></script>
+<!-- <script src="./src/pupsrc.js"></script> -->
+</html>

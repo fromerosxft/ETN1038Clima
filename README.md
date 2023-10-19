@@ -1,3 +1,4 @@
 # ETN1038Clima
 
-Pagina web de consulta de clima https://web1038-5f34c.web.app/ creada para registrar datos meteorologidos a partir de una API con limitacion de 24h de consulta por localidad.
+Página web para realizar un registro del clima en localidades (fecha, ciudad, coordenadas, temperatura, presion y humedad) a partir de una API con limitacion de 24h de consulta por localidad.
+
